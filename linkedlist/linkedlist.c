@@ -84,7 +84,7 @@ void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
 }
 
 int main (){
-    /*
+    /*rer
     MyLinkedList *head = (MyLinkedList*) malloc(sizeof(MyLinkedList));
     MyLinkedList *head1 = (MyLinkedList*) malloc(sizeof(MyLinkedList));
     MyLinkedList *head2 = (MyLinkedList*) malloc(sizeof(MyLinkedList));
