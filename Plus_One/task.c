@@ -13,7 +13,7 @@ int* plusOne(int* digits, int digitsSize, int* returnSize){
             i = digitsSize;
         }
     }
-    printf("%d\n", all_nine);
+    printf("nines - %d\n", all_nine);
     if (all_nine){
         int *ret2 = malloc((digitsSize+1)*sizeof(int));
         if (digits[0] + 1 == 10) ret2[0] = 1;
