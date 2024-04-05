@@ -5,14 +5,31 @@
 int maxProfit(int* prices, int pricesSize) {
     if (pricesSize == 1) return 0;
     if (pricesSize == 2 && prices[0] >= prices[1]) return 0;
-    int sell = 0;
-    for (int i = 0; i < pricesSize-1; i++){
-        for (int j = i+1; j < pricesSize; j++){
-            if (prices[j]-prices[i] > sell) sell = prices[j]-prices[i];
-        }
+    int buy = 0;
+    int sell = pricesSize - 1;
+    int profit = prices[sell] - prices[buy];
+    while (sell-buy != 1){
+        if (prices[buy+1]<prices[buy]) buy++;
+        else sell = sell - 1;
+        if (prices[sell] - prices[buy] > profit) profit = prices[sell] - prices[buy];
     }
-    return sell;
+    return profit;
 }
+
+//int maxProfit(int* prices, int pricesSize) {
+//    if (pricesSize == 1) return 0;
+//    if (pricesSize == 2 && prices[0] >= prices[1]) return 0;
+//    int buy = 0;
+//    int sell = pricesSize - 1;
+//    int profit = prices[sell] - prices[buy];
+//    while (sell-buy != 1){
+//        if (prices[buy+1]<prices[buy]) buy++;
+//        else sell = sell - 1;
+//        if (prices[sell] - prices[buy] > profit) profit = prices[sell] - prices[buy];
+//    }
+//    if (profit<0) return 0;
+//    return profit;
+//}
 
 int main (){
     int nums[] = {7,1,5,3,6,4};
