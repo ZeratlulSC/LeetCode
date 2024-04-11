@@ -24,9 +24,9 @@ char* gcdOfStrings(char* str1, char* str2) {
 }
 
 int main (){
-    char note[] = "ABCABC";
-    char mag[] = "ABC";
-    printf("%s\n", strstr(note, mag));
-    printf("%s\n", gcdOfStrings(note, mag));
+    char str1[] = "ABCABC";
+    char str2[] = "ABC";
+    printf("%s\n", strstr(str1, str2));
+    printf("%s\n", gcdOfStrings(str1, str2));
     return 0;
 }
